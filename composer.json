@@ -6,7 +6,12 @@
     "type": "project",
     "require": {
         "php": "^7.3|^8.0",
-        "laravel/lumen-framework": "^8.0"
+        "doctrine/dbal": "^3.1",
+        "firebase/php-jwt": "^5.4.0",
+        "flipbox/lumen-generator": "^8.2",
+        "illuminate/mail": "^8.49",
+        "laravel/lumen-framework": "^8.0",
+        "simonmarcellinden/helperpackage": "^1.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -18,7 +23,11 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/ResponseFromCode.php",
+            "app/Helpers/Subscribe.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [

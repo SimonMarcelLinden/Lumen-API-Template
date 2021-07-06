@@ -13,6 +13,8 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+use App\Http\Controllers\LoginController;
+
+$router->get('/health', function () use ($router) {
+    return responseFromCode( 101000, ['version' => $router->app->version()] );
 });

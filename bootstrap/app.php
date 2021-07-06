@@ -59,6 +59,7 @@ $app->singleton(
 */
 
 $app->configure('app');
+$app->configure('mail');
 $app->configure('responseMap');
 
 /*
@@ -106,6 +107,21 @@ $app->routeMiddleware([
 // $app->register(App\Providers\EventServiceProvider::class);
 // Lumen Generator for artisan make commands
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+$app->register(Illuminate\Mail\MailServiceProvider::class);
+
+/*
+|--------------------------------------------------------------------------
+| Register Alias
+|--------------------------------------------------------------------------
+|
+*/
+
+$app->alias('mail.manager', Illuminate\Mail\MailManager::class);
+$app->alias('mail.manager', Illuminate\Contracts\Mail\Factory::class);
+
+$app->alias('mailer', Illuminate\Mail\Mailer::class);
+$app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
+$app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -18,3 +18,7 @@ use App\Http\Controllers\LoginController;
 $router->get('/health', function () use ($router) {
     return responseFromCode( 101000, ['version' => $router->app->version()] );
 });
+
+//$router->post('auth/login', [LoginController::class, 'authenticate']);
+$router->post('auth/login/customer', 'CustomerLoginController@authenticate');
+$router->post('auth/login/user', 'UserLoginController@authenticate');

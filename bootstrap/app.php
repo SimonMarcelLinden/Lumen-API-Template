@@ -80,6 +80,15 @@ $app->configure('responseMap');
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
 
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class,
+]);
+
+$app->routeMiddleware([
+    'auth' => App\Http\Middleware\Authenticate::class,
+    'jwt.auth' => App\Http\Middleware\JwtMiddleware::class,
+    'hasAccess' => App\Http\Middleware\HasAccessMiddleware::class,
+]);
 
 /*
 |--------------------------------------------------------------------------

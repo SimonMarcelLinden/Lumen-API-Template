@@ -28,11 +28,25 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Error',
-                'message' => 'The request failed.' 
+                'message' => 'The request failed.'
             ],
             'de' => [
                 'title' => 'Fehler',
                 'message' => 'Die Anfrage ist fehlgeschlagen.'
+            ]
+        ]
+    ],
+    102005 => [
+        'status' => 404,
+        'detail' => 'not found',
+        'localized' => [
+            'en' => [
+                'title' => 'Error',
+                'message' => 'The server can not find the requested resource.'
+            ],
+            'de' => [
+                'title' => 'Fehler',
+                'message' => 'Die angeforderte Ressource wurde nicht gefunden.'
             ]
         ]
     ],
@@ -107,7 +121,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Login Failed',
-                'message' => 'Please check your email and password.' 
+                'message' => 'Please check your email and password.'
             ],
             'de' => [
                 'title' => 'Login Fehlgeschlagen',
@@ -176,7 +190,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Restored',
-                 'message' => 'The customer has been restored.' 
+                 'message' => 'The customer has been restored.'
             ],
             'de' => [
                 'title' => 'Wiederhergestellt',
@@ -192,7 +206,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Input incorrect',
-                'message' => 'Please check your entries.' 
+                'message' => 'Please check your entries.'
             ],
             'de' => [
                 'title' => 'Eingabe Fehlerhaft',
@@ -206,7 +220,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Customer does not exist',
-                'message' => 'The customer you specified does not exist.' 
+                'message' => 'The customer you specified does not exist.'
             ],
             'de' => [
                 'title' => 'Customer existiert nicht',
@@ -220,7 +234,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Already Registered',
-                'message' => 'The email address is already in use.' 
+                'message' => 'The email address is already in use.'
             ],
             'de' => [
                 'title' => 'Bereits Registiert',
@@ -292,7 +306,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Input incorrect',
-                'message' => 'Please check your entries.' 
+                'message' => 'Please check your entries.'
             ],
             'de' => [
                 'title' => 'Eingabe Fehlerhaft',
@@ -306,7 +320,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Role does not exist',
-                 'message' => 'The permission you specified does not exist.' 
+                 'message' => 'The permission you specified does not exist.'
             ],
             'de' => [
                 'title' => 'Rolle existiert nicht',
@@ -320,7 +334,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Permission already exists',
-                'message' => 'The role already has this permission.' 
+                'message' => 'The role already has this permission.'
             ],
             'de' => [
                 'title' => 'Permission existiert bereits',
@@ -334,7 +348,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Role could not be deleted',
-                 'message' => 'A role that is assigned to a user cannot be deleted.' 
+                 'message' => 'A role that is assigned to a user cannot be deleted.'
             ],
             'de' => [
                 'title' => 'Rolle konnte nicht gelöscht werden',
@@ -343,7 +357,7 @@ return [
         ]
     ],
 
-    
+
     /*
     |--------------------------------------------------------------------------
     | 20 - Newsletter
@@ -367,12 +381,12 @@ return [
     ],
     // FAILURE
     202000 => [
-        'status' => 500,
+        'status' => 501,
         'detail' => 'unknown error',
         'localized' => [
             'en' => [
                 'title' => 'Unknown error',
-                'message' => 'Unknown error in the e-mail delivery.' 
+                'message' => 'Unknown error in the e-mail delivery.'
             ],
             'de' => [
                 'title' => 'Unbekannter Fehler',
@@ -386,7 +400,7 @@ return [
         'localized' => [
             'en' => [
                 'title' => 'Already Registered',
-                'message' => 'The email address is already in use.' 
+                'message' => 'The email address is already in use.'
             ],
             'de' => [
                 'title' => 'Bereits Registiert',

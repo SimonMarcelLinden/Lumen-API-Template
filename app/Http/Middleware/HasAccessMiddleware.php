@@ -2,15 +2,24 @@
 namespace App\Http\Middleware;
 use Closure;
 use Exception;
-use App\User;
-use App\Role;
+
+use App\Models\Role;
 
 class HasAccessMiddleware {
 
     public function handle( $request, Closure $next, $role_label ) {
 
         $user = $request->auth;
-        $role = Role::where('label', $role_label)->first();
+
+        // dd($user);
+
+        // // get user role permissions
+        // $role = Role::findOrFail(auth()->user()->role_id);
+        // $permissions = $role->permissions;
+
+
+
+        $role = Role::where('name', $role_label)->first();
 
         if ( empty($user) ) {
             return responseFromCode(102050);

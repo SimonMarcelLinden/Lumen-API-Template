@@ -133,46 +133,46 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 12 - Customer
+    | 12 - User
     |--------------------------------------------------------------------------
     */
 
     // SUCCESS
     121000 => [
         'status' => 201,
-        'detail' => 'customer created',
+        'detail' => 'user created',
         'localized' => [
             'en' => [
                 'title' => 'Created',
-                'message' => 'The new customer was created successfully. '
+                'message' => 'The new user was created successfully. '
             ],
             'de' => [
                 'title' => 'Erstellt',
-                'message' => 'Der neue Customer wurde erfolgreich erstellt.'
+                'message' => 'Der neue User wurde erfolgreich erstellt.'
             ]
         ]
     ],
     121010 => [
         'status' => 200,
-        'detail' => 'customer found',
+        'detail' => 'user found',
     ],
     121020 => [
         'status' => 200,
-        'detail' => 'customer updated',
+        'detail' => 'user updated',
         'localized' => [
             'en' => [
                 'title' => 'Saved',
-                'message' => 'The customer was updated successfully.'
+                'message' => 'The user was updated successfully.'
             ],
             'de' => [
                 'title' => 'Gepeichert',
-                'message' => 'Der Customer wurde erfolgreich aktualisiert.'
+                'message' => 'Der User wurde erfolgreich aktualisiert.'
             ]
         ]
     ],
     121030 => [
         'status' => 200,
-        'detail' => 'customer deleted',
+        'detail' => 'user deleted',
         'localized' => [
             'en' => [
                 'title' => 'Deleted',
@@ -186,15 +186,15 @@ return [
     ],
     121040 => [
         'status' => 200,
-        'detail' => 'customer restored',
+        'detail' => 'user restored',
         'localized' => [
             'en' => [
                 'title' => 'Restored',
-                 'message' => 'The customer has been restored.'
+                 'message' => 'The user has been restored.'
             ],
             'de' => [
                 'title' => 'Wiederhergestellt',
-                'message' => 'Der Customer wurde wiederhergestellt.'
+                'message' => 'Der User wurde wiederhergestellt.'
             ]
         ]
     ],
@@ -216,15 +216,15 @@ return [
     ],
     122010 => [
         'status' => 404,
-        'detail' => 'customer not found',
+        'detail' => 'user not found',
         'localized' => [
             'en' => [
-                'title' => 'Customer does not exist',
-                'message' => 'The customer you specified does not exist.'
+                'title' => 'User does not exist',
+                'message' => 'The user you specified does not exist.'
             ],
             'de' => [
-                'title' => 'Customer existiert nicht',
-                'message' => 'Der von Ihnen angegebene Customer existiert nicht.'
+                'title' => 'User existiert nicht',
+                'message' => 'Der von Ihnen angegebene User existiert nicht.'
             ]
         ]
     ],

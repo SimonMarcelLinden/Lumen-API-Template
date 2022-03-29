@@ -17,7 +17,7 @@ use App\Http\Controllers\LoginController;
 
 $router->get('/', 'HealthController@version');
 $router->get('/health', 'HealthController@health');
-
-//$router->post('auth/login', [LoginController::class, 'authenticate']);
-$router->post('auth/login/customer', 'CustomerLoginController@authenticate');
-$router->post('auth/login/user', 'UserLoginController@authenticate');
+$router->group(['prefix' => 'auth'], function () use ($router) {
+    $router->post('register', 'RegisterController@register');
+    $router->post('login/user', 'AuthController@authenticate');
+});

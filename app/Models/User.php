@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Uuids;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -11,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Lumen\Auth\Authorizable;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract {
-    use Authenticatable, Authorizable, HasFactory, SoftDeletes;
+    use Authenticatable, Authorizable, HasFactory, SoftDeletes, Uuids;
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +20,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'email',
+        'firstname', 'lastname', 'email', "password",
     ];
 
     /**
@@ -33,5 +34,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
     public function getFullnameAttribute() {
         return ucfirst($this->firstname) . ' ' . ucfirst($this->lastname);
+    }
+
+    public function roles(){
+        return $this->belongsToMany(Role::class);
     }
 }

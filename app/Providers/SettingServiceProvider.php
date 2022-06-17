@@ -28,7 +28,7 @@ class SettingServiceProvider extends ServiceProvider {
 				foreach ($model->elements as $option) {
 					$relationObjects[$option->name]['id'] = $option->id;
 					$relationObjects[$option->name]['name'] = $option->name; // name or whatever property you want
-					$relationObjects[$option->name]['type'] = $option->tape;
+					$relationObjects[$option->name]['type'] = $option->type;
 					$relationObjects[$option->name]['label'] = $option->label;
 					$relationObjects[$option->name]['rules'] = $option->rules;
 					$relationObjects[$option->name]['message'] = $option->message;

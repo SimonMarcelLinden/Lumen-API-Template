@@ -15,8 +15,10 @@ class Option extends JsonResource {
 		return [
 			'id' => $this->id,
 			'name' => $this->name,
+			'data' => $this->data,
 			'type' => $this->type,
 			'label' => $this->label,
+			'value' => $this->value,
 			'rules'  => $this->rules,
 			'message' => $this->message,
 		];

@@ -17,6 +17,7 @@ class Setting extends JsonResource {
 				'id' => $this->id,
 				'title' => $this->title,
 				'desc' => $this->desc,
+				'value' => $this->value,
 				'icon' => $this->icon,
 				'elements' => new OptionCollection($this->elements)
 			]

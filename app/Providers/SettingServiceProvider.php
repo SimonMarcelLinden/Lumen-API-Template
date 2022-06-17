@@ -21,6 +21,7 @@ class SettingServiceProvider extends ServiceProvider {
 				$data[$model->title]['id'] 		= $model->id;
 				$data[$model->title]['title'] 	= $model->title;
 				$data[$model->title]['desc'] 	= $model->desc;
+				$data[$model->title]['value'] 	= $model->value;
 				$data[$model->title]['icon'] 	= $model->icon;
 
 				// return $model;
@@ -30,6 +31,7 @@ class SettingServiceProvider extends ServiceProvider {
 					$relationObjects[$option->name]['name'] = $option->name; // name or whatever property you want
 					$relationObjects[$option->name]['type'] = $option->type;
 					$relationObjects[$option->name]['label'] = $option->label;
+					$relationObjects[$option->name]['value'] = $option->value;
 					$relationObjects[$option->name]['rules'] = $option->rules;
 					$relationObjects[$option->name]['message'] = $option->message;
 				}

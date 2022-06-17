@@ -13,6 +13,13 @@ class SettingSeeder extends Seeder {
      * @return void
      */
     public function run() {
+        $app = Setting::create([
+            "title" => "app_name",
+            "desc" => "App Name",
+            "value" => "Fachschaft ET - API",
+            "icon" => "glyphicon-home"
+        ]);
+
         $contact = Setting::create([
             "title" => "contact",
             "desc" => "Contact information",

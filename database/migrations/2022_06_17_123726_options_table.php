@@ -15,7 +15,7 @@ return new class extends Migration {
 			$table->uuid('id')->primary();
 			$table->string('name');
 			$table->string('data')->default('string');
-			$table->string('type');
+			$table->enum('type', ['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden', 'image', 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 'time', 'url', 'week'])->default('text');
 			$table->string('label');
 			$table->string('value');
 			$table->string('rules')->default('required');

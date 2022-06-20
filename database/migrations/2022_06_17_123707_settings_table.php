@@ -14,7 +14,7 @@ return new class extends Migration {
 		Schema::create('settings', function (Blueprint $table) {
 			$table->uuid('id')->primary();
 			$table->string('title');
-			$table->string('desc');
+			$table->string('desc')->nullable();
 			$table->string('value');
 			$table->string('icon')->default('glyphicon-pencil');
 			$table->timestamps();

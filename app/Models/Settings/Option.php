@@ -10,19 +10,19 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Option extends Model {
 	use HasFactory, SoftDeletes, Uuids;
 
-    protected $guarded = [];
+	protected $guarded = [];
 
 	/**
 	* The table associated with the model.
 	*
 	* @var string
 	*/
-   	protected $table = 'options';
+	protected $table = 'options';
 
 	/**
 	 * Get the setting record associated with the Option.
-     */
+	 */
 	public function setting() {
-		return $this->belongsToOne(Setting::class);
+		return $this->hasOne(Setting::class);
 	}
 }

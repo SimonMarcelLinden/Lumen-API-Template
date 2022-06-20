@@ -25,4 +25,6 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
 $router->group([], function() use ($router) {
     $router->get('/settings', 'Settings\SettingController@index');
     $router->post('/settings', 'Settings\SettingController@store');
+    $router->patch('/settings', 'Settings\SettingController@update');
+    $router->get('/settings/{key:.*}', 'Settings\SettingController@show');
 });

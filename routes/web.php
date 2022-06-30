@@ -21,3 +21,9 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
     $router->post('register', 'RegisterController@register');
     $router->post('login/user', 'AuthController@authenticate');
 });
+
+$router->group(['prefix' => 'image'], function () use ($router) {
+	$router->get('/{id}', 'ImageController@show');
+	$router->post('/upload', 'ImageController@upload');
+	$router->delete('/delete/{id}', 'ImageController@delete');
+});

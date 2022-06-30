@@ -22,9 +22,8 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
     $router->post('login/user', 'AuthController@authenticate');
 });
 
-$router->group([], function() use ($router) {
-    $router->get('/settings', 'Settings\SettingController@index');
-    $router->post('/settings', 'Settings\SettingController@store');
-    $router->patch('/settings', 'Settings\SettingController@update');
-    $router->get('/settings/{key:.*}', 'Settings\SettingController@show');
+$router->group(['prefix' => 'image'], function () use ($router) {
+	$router->get('/{id}', 'ImageController@show');
+	$router->post('/upload', 'ImageController@upload');
+	$router->delete('/delete/{id}', 'ImageController@delete');
 });

@@ -108,7 +108,6 @@ $app->routeMiddleware([
 // Lumen Generator for artisan make commands
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 $app->register(Illuminate\Mail\MailServiceProvider::class);
-$app->register(App\Providers\SettingServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -21,8 +21,3 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
     $router->post('register', 'RegisterController@register');
     $router->post('login/user', 'AuthController@authenticate');
 });
-
-$router->group([], function() use ($router) {
-    $router->get('/settings', 'Settings\SettingController@index');
-    $router->post('/settings', 'Settings\SettingController@store');
-});
